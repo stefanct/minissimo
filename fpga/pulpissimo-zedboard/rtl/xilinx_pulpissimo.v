@@ -95,38 +95,38 @@ module xilinx_pulpissimo (
     .USE_FPU(USE_FPU),
     .USE_HWPE(USE_HWPE)
   ) i_pulpissimo (
-    .pad_spim_sdio0(led4_o),
-    .pad_spim_sdio1(led5_o),
-    .pad_spim_sdio2(led6_o),
-    .pad_spim_sdio3(led7_o),
-    .pad_spim_csn0(pad_uart_rts),
-    .pad_spim_csn1(led0_o),
-    .pad_spim_sck(pad_uart_cts),
-    .pad_uart_rx(pad_uart_rx),
-    .pad_uart_tx(pad_uart_tx),
-    .pad_cam_pclk(led1_o),
-    .pad_cam_hsync(led2_o),
-    .pad_cam_data0(led3_o),
-    .pad_cam_data1(switch0_i),
-    .pad_cam_data2(switch1_i),
-    .pad_cam_data3(btnu_i),
-    .pad_cam_data4(btnr_i),
-    .pad_cam_data5(btnd_i),
-    .pad_cam_data6(btnl_i),
-    .pad_cam_data7(switch2_i),
-    .pad_cam_vsync(switch3_i),
-    .pad_sdio_clk(pad_i2c1_scl),
-    .pad_sdio_cmd(pad_i2c1_sda),
-    .pad_sdio_data0(switch4_i),
-    .pad_sdio_data1(switch5_i),
-    .pad_sdio_data2(switch6_i),
-    .pad_sdio_data3(switch7_i),
-    .pad_i2c0_sda(pad_i2c0_sda),
-    .pad_i2c0_scl(pad_i2c0_scl),
-    .pad_i2s0_sck(pad_pmod1_4),
-    .pad_i2s0_ws(pad_pmod1_5),
-    .pad_i2s0_sdi(pad_pmod1_6),
-    .pad_i2s1_sdi(pad_pmod1_7),
+    .pad_spim_sdio0(led4_o),      // GPIO0
+    .pad_spim_sdio1(led5_o),      // GPIO1
+    .pad_spim_sdio2(led6_o),      // GPIO2
+    .pad_spim_sdio3(led7_o),      // GPIO3
+    .pad_spim_csn0(pad_uart_rts), // GPIO4
+    .pad_spim_csn1(led0_o),       // GPIO5
+    .pad_spim_sck(pad_uart_cts),  // GPIO6
+    .pad_uart_rx(pad_uart_rx),    // GPIO7
+    .pad_uart_tx(pad_uart_tx),    // GPIO8
+    .pad_cam_pclk(led1_o),        // GPIO9
+    .pad_cam_hsync(led2_o),       // GPIO10
+    .pad_cam_data0(led3_o),       // GPIO11
+    .pad_cam_data1(switch0_i),    // GPIO12
+    .pad_cam_data2(switch1_i),    // GPIO13
+    .pad_cam_data3(btnu_i),       // GPIO14
+    .pad_cam_data4(btnr_i),       // GPIO15
+    .pad_cam_data5(btnd_i),       // GPIO16
+    .pad_cam_data6(btnl_i),       // GPIO17
+    .pad_cam_data7(switch2_i),    // GPIO18
+    .pad_cam_vsync(switch3_i),    // GPIO19
+    .pad_sdio_clk(pad_i2c1_scl),  // GPIO20
+    .pad_sdio_cmd(pad_i2c1_sda),  // GPIO21
+    .pad_sdio_data0(switch4_i),   // GPIO22
+    .pad_sdio_data1(switch5_i),   // GPIO23
+    .pad_sdio_data2(switch6_i),   // GPIO24
+    .pad_sdio_data3(switch7_i),   // GPIO25
+    .pad_i2c0_sda(pad_i2c0_sda),  // GPIO33
+    .pad_i2c0_scl(pad_i2c0_scl),  // GPIO34
+    .pad_i2s0_sck(pad_pmod1_4),   // GPIO35
+    .pad_i2s0_ws(pad_pmod1_5),    // GPIO36
+    .pad_i2s0_sdi(pad_pmod1_6),   // GPIO37
+    .pad_i2s1_sdi(pad_pmod1_7),   // GPIO38
     .pad_reset_n(rst_n),
     .pad_jtag_tck(tck_int),
     .pad_jtag_tdi(pad_jtag_tdi),
