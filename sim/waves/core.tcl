@@ -6,7 +6,7 @@ set rvpmp [find instances -recursive -bydu riscv_pmp]
 if {$rvcores ne ""} {
   set rvprefetch [find instances -recursive -bydu riscv_prefetch_L0_buffer -nodu]
 
-  add wave -group "Core"                                     $rvcores/*
+  add wave -group "Core"  -group "Main"                                     $rvcores/*
   add wave -group "Core"  -group "IF Stage" -group "Hwlp Ctrl"              $rvcores/if_stage_i/hwloop_controller_i/*
   if {$rvprefetch ne ""} {
     add wave -group "Core"  -group "IF Stage" -group "Prefetch" -group "L0"   $rvcores/if_stage_i/prefetch_128/prefetch_buffer_i/L0_buffer_i/*
