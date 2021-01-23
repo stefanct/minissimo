@@ -48,7 +48,10 @@ apb_interrupt_cntrl:
   commit: v0.0.1
   domain: [soc]
 axi/axi:
-  commit: v0.24.1
+# vsim 10.6c fix
+  server: https://github.com
+  group:  stefanct
+  commit: 68972ca403d15bcbe6fa147feaf13304017177c6
   domain: [cluster, soc]
 # axi/axi_node:
 #   commit: v1.1.4
@@ -118,5 +121,7 @@ riscv-dbg:
   commit: v0.2
   domain: [soc]
 register_interface:
-  commit: b1bc9c22e0c2a5801107070c022904498dbae34b
+  server: https://github.com
+  group:  stefanct
+  commit: b37a55b9d0f3bce6293e9d266217b84f3e5c6b99
   domain: [soc]
