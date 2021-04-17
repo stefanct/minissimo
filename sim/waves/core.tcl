@@ -35,11 +35,30 @@ if {$rvcores ne ""} {
   if {$rvpmp ne ""} {
     add wave -group "Core"  -group "PMP"                                    $rvcores/RISCY_PMP/pmp_unit_i/*
   }
+
+  add wave -group "Core" -group "CSR" -group "PCCR" -radix d -radixshowbase 0 -label {PCCR[ 0] Cycles} $rvcores/cs_registers_i/PCCR_q\[0\]
+  add wave -group "Core" -group "CSR" -group "PCCR" -radix d -radixshowbase 0 -label {PCCR[ 1] Insts} $rvcores/cs_registers_i/PCCR_q\[1\]
+  add wave -group "Core" -group "CSR" -group "PCCR" -radix d -radixshowbase 0 -label {PCCR[ 2] LD Stalls} $rvcores/cs_registers_i/PCCR_q\[2\]
+  add wave -group "Core" -group "CSR" -group "PCCR" -radix d -radixshowbase 0 -label {PCCR[ 3] J/B Stalls} $rvcores/cs_registers_i/PCCR_q\[3\]
+  add wave -group "Core" -group "CSR" -group "PCCR" -radix d -radixshowbase 0 -label {PCCR[ 4] $ Misses} $rvcores/cs_registers_i/PCCR_q\[4\]
+  add wave -group "Core" -group "CSR" -group "PCCR" -radix d -radixshowbase 0 -label {PCCR[ 5] Loads} $rvcores/cs_registers_i/PCCR_q\[5\]
+  add wave -group "Core" -group "CSR" -group "PCCR" -radix d -radixshowbase 0 -label {PCCR[ 6] Stores} $rvcores/cs_registers_i/PCCR_q\[6\]
+  add wave -group "Core" -group "CSR" -group "PCCR" -radix d -radixshowbase 0 -label {PCCR[ 7] Jumps} $rvcores/cs_registers_i/PCCR_q\[7\]
+  add wave -group "Core" -group "CSR" -group "PCCR" -radix d -radixshowbase 0 -label {PCCR[ 8] Branches} $rvcores/cs_registers_i/PCCR_q\[8\]
+  add wave -group "Core" -group "CSR" -group "PCCR" -radix d -radixshowbase 0 -label {PCCR[ 9] B taken} $rvcores/cs_registers_i/PCCR_q\[9\]
+  add wave -group "Core" -group "CSR" -group "PCCR" -radix d -radixshowbase 0 -label {PCCR[10] Compr. Insts} $rvcores/cs_registers_i/PCCR_q\[10\]
+  add wave -group "Core" -group "CSR" -group "PCCR" -radix d -radixshowbase 0 -label {PCCR[11] ELW} $rvcores/cs_registers_i/PCCR_q\[11\]
+  add wave -group "Core" -group "CSR" -group "PCCR" -radix d -radixshowbase 0 -label {PCCR[12] Ext. 0} $rvcores/cs_registers_i/PCCR_q\[12\]
+  add wave -group "Core" -group "CSR" -group "PCCR" -radix d -radixshowbase 0 -label {PCCR[13] APU Conf.} $rvcores/cs_registers_i/PCCR_q\[13\]
+  add wave -group "Core" -group "CSR" -group "PCCR" -radix d -radixshowbase 0 -label {PCCR[14] APU Cont.} $rvcores/cs_registers_i/PCCR_q\[14\]
+  add wave -group "Core" -group "CSR" -group "PCCR" -radix d -radixshowbase 0 -label {PCCR[15] APU Dep.} $rvcores/cs_registers_i/PCCR_q\[15\]
+  add wave -group "Core" -group "CSR" -group "PCCR" -radix d -radixshowbase 0 -label {PCCR[16] WB Cont.} $rvcores/cs_registers_i/PCCR_q\[16\]
+
   add wave -group "Core"  -group "CSR"                                      $rvcores/cs_registers_i/*
 }
 
 configure wave -namecolwidth  250
-configure wave -valuecolwidth 100
+configure wave -valuecolwidth 240
 configure wave -justifyvalue left
 configure wave -signalnamewidth 1
 configure wave -timelineunits ns
