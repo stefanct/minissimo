@@ -4,7 +4,7 @@ mkfile_path := $(dir $(abspath $(firstword $(MAKEFILE_LIST))))
 
 VSIM        ?= vsim
 VSIM_FLAGS  = -gUSE_SDVT_SPI=0 -gUSE_SDVT_CPI=0 -gBAUDRATE=115200 \
-		-gENABLE_DEV_DPI=0 -gLOAD_L2=JTAG -gUSE_SDVT_I2S=0
+		-gENABLE_DEV_DPI=0 -gLOAD_L2=FAST_DEBUG_PRELOAD -gUSE_SDVT_I2S=0
 
 SVLIB	    =  ../rtl/tb/remote_bitbang/librbs
 
