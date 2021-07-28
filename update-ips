@@ -23,6 +23,8 @@ parser.add_argument('--flash-vip', action='store_true',
 parser.add_argument('--i2s-vip', action='store_true',
                     help="""Use the i2s model (24FC1025).
                     Needs to be installed.""")
+parser.add_argument('--remote', default='origin',
+                    help="""Git remote (defaults to origin).""")
 parser.add_argument('--verbose', action='store_true',
                     help='Show more information about commands')
 
@@ -44,7 +46,7 @@ ipdb = ipstools.IPDatabase(
     verbose=args.verbose
 )
 # updates the IPs from the git repo
-ipdb.update_ips()
+ipdb.update_ips(origin=args.remote)
 
 # launch generate-ips.py
 ipdb.save_database()

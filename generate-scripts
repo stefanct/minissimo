@@ -26,6 +26,8 @@ parser.add_argument('--flash-vip', action='store_true',
 parser.add_argument('--i2s-vip', action='store_true',
                     help="""Use the i2s model (24FC1025).
                     Needs to be installed.""")
+parser.add_argument('--remote', default='origin',
+                    help="""(For compatibility with update-ips only)""")
 parser.add_argument('--verbose', action='store_true',
                     help='Show more information about commands')
 
