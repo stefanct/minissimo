@@ -8,21 +8,6 @@
 
 #define VERBOSE 0
 
-int rbs_err;
-
-unsigned char tck;
-unsigned char tms;
-unsigned char tdi;
-unsigned char trstn;
-unsigned char tdo;
-unsigned char quit;
-
-int socket_fd;
-int client_fd;
-
-static const ssize_t buf_size = 64 * 1024;
-char recv_buf[64 * 1024];
-ssize_t recv_start, recv_end;
 
 // Create a new server, listening for connections from localhost on the given
 // port.
