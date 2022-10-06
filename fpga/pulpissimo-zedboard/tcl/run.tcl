@@ -10,6 +10,10 @@ create_project $PROJECT . -force -part $::env(XILINX_PART)
 set_property board_part $XILINX_BOARD [current_project]
 
 # set up includes
+if ![file exists ../pulpissimo/tcl/ips_inc_dirs.tcl] {
+    puts "Include files in fpga/pulpissimo/ not found. You may need to run update-ips."
+    exit
+}
 source ../pulpissimo/tcl/ips_inc_dirs.tcl
 set_property include_dirs $INCLUDE_DIRS [current_fileset]
 set_property include_dirs $INCLUDE_DIRS [current_fileset -simset]
