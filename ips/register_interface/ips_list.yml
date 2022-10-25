@@ -1,0 +1,7 @@
+axi/axi:
+  # vsim 10.6c fix
+  commit: 68972ca403d15bcbe6fa147feaf13304017177c6
+  domain: [cluster, soc]
+common_cells:
+  commit: v1.20.0
+  domain: [cluster, soc]
