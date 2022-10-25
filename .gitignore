@@ -6,10 +6,10 @@ xrun.log
 bender
 Bender.lock
 
-ips
+
 __pycache__
-ipstools
-ipstools/*
+
+
 
 install
 install/*

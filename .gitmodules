@@ -1,0 +1,6 @@
+[submodule "ips/ibex"]
+	path = ips/ibex
+	url = https://github.com/lowRISC/ibex.git
+[submodule "ips/riscv"]
+	path = ips/riscv
+	url = https://github.com/stefanct/riscv.git
